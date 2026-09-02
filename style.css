@@ -70,11 +70,32 @@ h1 {
   text-transform: uppercase;
 }
 
+h1::after {
+  content: '_';
+  display: inline-block;
+  margin-left: 5px;
+  animation: piscar-cursor 0.8s infinite;
+}
+
+
+@keyframes piscar-cursor {
+  0%, 49% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0;
+  }
+}
+
 p {
   text-align: center;
   padding: 10px auto;
   margin-bottom: 40px;
   text-transform: uppercase;
+}
+
+span {
+font-weight: bold;
 }
 
 .nav-links {
@@ -104,6 +125,21 @@ a:active {
   color: var(--matrix-black);
   transform: translate(-2px, -2px);
   box-shadow: 6px 6px 0px #000;
+}
+
+.rodape {
+  margin-top: 30px;
+  border-top: 1px dashed
+  padding-top: 15px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rodape p {
+  margin-bottom: 0; /* Remove a margem padrão do parágrafo */
+  font-size: 0.8rem; /* Deixa a letra um pouco menor que o texto principal */
+  opacity: 0.7; /* Dá um efeito levemente apagado, típico de rodapés */
 }
 
 #matrix-rain {
