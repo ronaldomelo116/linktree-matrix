@@ -55,3 +55,13 @@ for (let i = 0; i < quantidadeColunas; i++) {
   criarColuna();
 }
 
+window.addEventListener("load", () => {
+ const loadingScreen = document.getElementById("loading-screen");
+
+ setTimeout(() => {
+  loadingScreen.classList.add("esconder-loading");
+
+ }, 2500);
+ 
+});
+
